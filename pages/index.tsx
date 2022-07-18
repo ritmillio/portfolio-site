@@ -1,17 +1,14 @@
 import type { NextPage } from 'next'
-import Cursor from '../components/Cursor/Cursor'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Header/Navbar'
+import Intro from '../components/Intro'
+import Footer from '../components/Footer/Footer'
 
 const Home: NextPage = () => {
   return (
     <div>
-      <Cursor />
-      <div className='container mx-auto'>
-        <div className='flex items-center justify-center h-screen'>
-          Hola
-        </div>
-      </div>
       <Navbar />
+      <Intro />
+      <Footer />
     </div>
   )
 }

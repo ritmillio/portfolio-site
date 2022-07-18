@@ -1,16 +1,16 @@
 import React from 'react'
 
-const Navbar: React.FC = () => {
+const Footer: React.FC = () => {
     return (
         <div>
           <div className='container mx-auto'>
             <div className='flex items-center justify-center h-screen'>
-              Hola
+              Footer
             </div>
           </div>
         </div>
       )
   }
   
-  export default Navbar
+  export default Footer
   
