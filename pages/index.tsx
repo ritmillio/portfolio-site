@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
-import Cursor from '../components/cursor'
+import Cursor from '../components/Cursor/Cursor'
+import Navbar from '../components/Navbar'
 
 const Home: NextPage = () => {
   return (
@@ -10,6 +11,7 @@ const Home: NextPage = () => {
           Hola
         </div>
       </div>
+      <Navbar />
     </div>
   )
 }
