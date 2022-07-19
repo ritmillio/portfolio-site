@@ -3,8 +3,7 @@ import React from 'react'
 const ContactMe: React.FC = () => {
     return (
         <div>
-          {/* Contact me */}
-          <div className="bg-white">
+          <div className="dark:bg-black dark:text-white bg-white text-black">
             <div className="h-50 container mx-auto flex flex-col items-center justify-center px-4 max-w-3xl">
               <div>
                 fontawesome

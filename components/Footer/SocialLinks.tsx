@@ -96,9 +96,6 @@ const SocialLinks: React.FC = () => {
               </a> */}
             </div>
           </div>
-          <div className="bg-gray-100 p-4">
-            <p id="copyright" className ="text-center text-xs">© 2022 Zoltan Fodor</p>
-          </div>
         </div>
       )
   }

@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import ContactMe from './ContactMe'
 import SocialLinks from './SocialLinks'
 // const imageBaseLoader = ({ src: any, width, quality }) => {
@@ -11,6 +10,9 @@ const Footer: React.FC = () => {
         <footer>
           <ContactMe />
           <SocialLinks />
+          <div className="dark:bg-gray-900 bg-gray-100 dark:text-white text-black p-4">
+            <p id="copyright" className="text-center text-xs">© 2022 Zoltan Fodor</p>
+          </div>
         </footer>
       )
   }
