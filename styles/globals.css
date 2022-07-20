@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* remove scrollbar */
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* cursor color */
 html {
   --cursor-color: #333
 }
 
-html.dark-mode {
+html .dark-mode {
   --cursor-color: #fff
 }
