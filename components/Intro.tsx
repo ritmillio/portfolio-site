@@ -1,22 +1,31 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { Tween, ScrollTrigger, } from 'react-gsap';
 import { gsap } from 'gsap';
+import sr from 'scrollreveal'
 
 const Intro: React.FC = () => {
+    const refToComponent = useRef(null)
 
+    // useEffect(() => {
+    //   const el = divRef.current;
 
-    const divRef = useRef(null)
+    //   gsap.fromTo(el, {rotation: 0}, {rotation: 180, duration:3})
+    // }, [])
 
     useEffect(() => {
-      const el = divRef.current;
-
-      gsap.fromTo(el, {rotation: 0}, {rotation: 180, duration:3})
+      async function animate() {
+        if (refToComponent.current) {
+          const sr = (await import("scrollreveal")).default
+          sr().reveal(refToComponent.current)
+        }
+      }
+      animate()
     }, [])
 
     return (
         <div className='dark:bg-green-900 bg-red-200'>  
           <div className='py-48 dark:bg-green-500 dark:text-white'>
-          <h1 className="headline text-center">
+          <h1 className="headline text-center" ref={refToComponent}>
             Widget Inc.
           </h1>
           </div>
@@ -30,7 +39,7 @@ const Intro: React.FC = () => {
             </Tween>
           </ScrollTrigger>
           <div className='container mx-auto'>
-            <div className='flex items-center justify-center h-screen' ref={divRef}>Intro</div>
+            <div className='flex items-center justify-center h-screen'>Intro</div>
           </div>
 
           <ScrollTrigger start="-200px center" end="200px center" scrub={0.5} markers>
