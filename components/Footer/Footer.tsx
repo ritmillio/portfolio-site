@@ -10,8 +10,8 @@ const Footer: React.FC = () => {
         <footer>
           <ContactMe />
           <SocialLinks />
-          <div className="dark:bg-gray-900 bg-gray-100 dark:text-white text-black p-4">
-            <p id="copyright" className="text-center text-xs">© 2022 Zoltan Fodor</p>
+          <div className="dark:bg-drk-bgPrimary bg-lght-background p-4">
+            <p id="copyright" className="text-center text-xs dark:text-drk-p text-lght-p">© 2022 Zoltan Fodor</p>
           </div>
         </footer>
       )

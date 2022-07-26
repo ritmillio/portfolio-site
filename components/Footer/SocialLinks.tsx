@@ -5,7 +5,7 @@ import Image from 'next/image'
 const SocialLinks: React.FC = () => {
     return (
         <div>
-         <div className="h-36 sm:h-40 md:h-48 bg-gray-100">
+         <div className="h-36 sm:h-40 md:h-48 dark:bg-drk-bgSec bg-lght-main">
             <div className="h-full flex items-center justify-center">
               <a className="mx-2 sm:mx-4  lg:mx-6" href="#" target="_blank" rel="noreferrer">
                 <Image
