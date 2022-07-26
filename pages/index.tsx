@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Navbar from '../components/Header/Navbar'
-import Intro from '../components/Intro'
+import Intro from '../components/Intro/Intro'
 import Footer from '../components/Footer/Footer'
 import { useTheme } from 'next-themes'
 

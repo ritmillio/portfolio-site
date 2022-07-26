@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { Tween, ScrollTrigger, } from 'react-gsap';
 import { gsap } from 'gsap';
-import sr from 'scrollreveal'
 
 const Intro: React.FC = () => {
     const refToComponent = useRef(null)
@@ -15,7 +14,8 @@ const Intro: React.FC = () => {
     useEffect(() => {
       async function animate() {
         if (refToComponent.current) {
-          const sr = (await import("scrollreveal")).default
+          const sr = (await require("scrollreveal")).default
+          sr({ reset: true })
           sr().reveal(refToComponent.current)
         }
       }
