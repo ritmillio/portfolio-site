@@ -15,9 +15,10 @@ module.exports = {
         // dark theme
         // https://www.happyhues.co/palettes/4
         drk: {
-          bgackground: '#16161a',
+          bgPrimary: '#16161a',
+          bgSec: '#242629',
           headline: '#fffffe',
-          paragh: '#94a1b2',
+          p: '#94a1b2',
           btn: '#7f5af0',
           btntxt: '#fffffe',
           stroke: '#010101',
@@ -29,9 +30,9 @@ module.exports = {
         // light theme
         // https://www.happyhues.co/palettes/11
         lght: {
-          bgackground: '#f9f4ef',
+          background: '#f9f4ef',
           headline: '#020826',
-          paragh: '#716040',
+          p: '#716040',
           btn: '#8c7851',
           btntxt: '#fffffe',
           stroke: '#020826',

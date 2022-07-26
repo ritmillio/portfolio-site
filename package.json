@@ -10,12 +10,16 @@
   },
   "dependencies": {
     "@types/react-copy-to-clipboard": "^5.0.3",
+    "axios": "^0.27.2",
+    "gsap": "^3.10.4",
     "next": "12.2.2",
     "next-themes": "^0.2.0",
     "react": "18.2.0",
     "react-animated-cursor": "^2.5.1",
     "react-copy-to-clipboard": "^5.1.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-gsap": "^3.2.1",
+    "scrollreveal": "^4.0.9"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.4",
