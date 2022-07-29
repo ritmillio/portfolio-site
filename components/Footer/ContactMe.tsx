@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-
-const ContactMe: React.FC = () => {
+const ContactMe = () => {
     return (
         <div>
           <div className="dark:bg-drk-bgPrimary bg-lght-background">
