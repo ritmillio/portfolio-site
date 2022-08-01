@@ -3,7 +3,9 @@ import { Tween, ScrollTrigger, } from 'react-gsap';
 import { gsap } from 'gsap';
 
 const Intro: React.FC = () => {
-    const refToComponent = useRef(null)
+
+    const refToComponent = useRef<HTMLHeadingElement>(null)
+    const secondRefToComponent = useRef<HTMLHeadingElement>(null)
 
     // useEffect(() => {
     //   const el = divRef.current;
@@ -14,15 +16,18 @@ const Intro: React.FC = () => {
 
     useEffect(() => {
       async function animate() {
-        if (refToComponent.current) {
           const sr = (await require("scrollreveal")).default({
-              origin: "top",
-              distance: "60px",
-              duration: 2500,
-              delay: 400,
-              reset: true,
-          })
-           sr.reveal(refToComponent.current, { delay: 600 }) 
+            origin: "top",
+            distance: "60px",
+            duration: 2500,
+            delay: 400,
+            reset: true,
+        })
+        if (refToComponent.current) {
+          sr.reveal(refToComponent.current, {})
+        }
+        if (secondRefToComponent.current) {
+          sr.reveal(secondRefToComponent.current, {})
         }
       }
       animate()
@@ -30,10 +35,13 @@ const Intro: React.FC = () => {
 
     return (
         <div className='dark:bg-green-900 bg-red-200'>  
-          <div className='py-48 dark:bg-green-500 dark:text-white h-screen flex items-center justify-center'>
+          <div className='py-48 dark:bg-green-500 dark:text-white h-screen flex flex-col items-center justify-center'>
             <h1 className="headline text-center" ref={refToComponent}>
               Widget Inc.
             </h1>
+            <div className='text-center pt-60' ref={secondRefToComponent}>
+              asdasdasdas
+            </div>
           </div>
           <div className='py-30 dark:bg-red-400 dark:text-white'>
                 <p className="text"> <span className="text__first"><span className="text__word">Hello </span><span className="text__first-bg"></span></span><br/><span className="text__second"><span className="text__word">World</span><span className="text__second-bg"></span></span></p>
@@ -81,3 +89,26 @@ const Intro: React.FC = () => {
   
   export default Intro
   
+
+
+//   import React, { useRef } from "react";
+
+// const Child = React.forwardRef((props, ref) => {
+//   const { ref1, ref2 } = ref.current;
+//   console.log(ref1, ref2);
+
+//   return (
+//     <>
+//       <p ref={ref1}>foo</p>
+//       <p ref={ref2}>bar</p>
+//     </>
+//   );
+// });
+
+// export default function App() {
+//   const ref1 = useRef();
+//   const ref2 = useRef();
+//   const ref = useRef({ ref1, ref2 });
+
+//   return <Child ref={ref} />;
+// }

@@ -4,7 +4,6 @@ import { useTheme } from 'next-themes'
 // Components ->
 import Navbar from '../components/Header/Navbar'
 import Intro from '../components/Intro/Intro'
-// import Articles from '../components/Articles/Articles'
 import Footer from '../components/Footer/Footer'
 
 
@@ -13,10 +12,10 @@ const Home: NextPage = () => {
   const {theme, setTheme} = useTheme()
   return (
     <div>
-      {/* <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+      <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
         toggle
       </button>
-      <Navbar /> */}
+      <Navbar />
       {/* <Articles /> */}
       <Intro />
       <Footer />
