@@ -13,10 +13,10 @@ const Home: NextPage = () => {
   const {theme, setTheme} = useTheme()
   return (
     <div>
-      <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+      {/* <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
         toggle
       </button>
-      <Navbar />
+      <Navbar /> */}
       {/* <Articles /> */}
       <Intro />
       <Footer />

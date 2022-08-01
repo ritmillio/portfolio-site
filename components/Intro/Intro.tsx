@@ -11,12 +11,18 @@ const Intro: React.FC = () => {
     //   gsap.fromTo(el, {rotation: 0}, {rotation: 180, duration:3})
     // }, [])
 
+
     useEffect(() => {
       async function animate() {
         if (refToComponent.current) {
-          const sr = (await require("scrollreveal")).default
-          sr({ reset: true })
-          sr().reveal(refToComponent.current)
+          const sr = (await require("scrollreveal")).default({
+              origin: "top",
+              distance: "60px",
+              duration: 2500,
+              delay: 400,
+              reset: true,
+          })
+           sr.reveal(refToComponent.current, { delay: 600 }) 
         }
       }
       animate()
@@ -24,10 +30,10 @@ const Intro: React.FC = () => {
 
     return (
         <div className='dark:bg-green-900 bg-red-200'>  
-          <div className='py-48 dark:bg-green-500 dark:text-white'>
-          <h1 className="headline text-center" ref={refToComponent}>
-            Widget Inc.
-          </h1>
+          <div className='py-48 dark:bg-green-500 dark:text-white h-screen flex items-center justify-center'>
+            <h1 className="headline text-center" ref={refToComponent}>
+              Widget Inc.
+            </h1>
           </div>
           <div className='py-30 dark:bg-red-400 dark:text-white'>
                 <p className="text"> <span className="text__first"><span className="text__word">Hello </span><span className="text__first-bg"></span></span><br/><span className="text__second"><span className="text__word">World</span><span className="text__second-bg"></span></span></p>
