@@ -1,17 +1,23 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { Tween, ScrollTrigger, } from 'react-gsap';
-import { gsap } from 'gsap';
 
 const Intro: React.FC = () => {
 
     const refToComponent = useRef<HTMLHeadingElement>(null)
     const secondRefToComponent = useRef<HTMLHeadingElement>(null)
 
-    // useEffect(() => {
-    //   const el = divRef.current;
 
-    //   gsap.fromTo(el, {rotation: 0}, {rotation: 180, duration:3})
-    // }, [])
+    // <div> reference type
+    
+
+    // <button> reference type
+    // const buttonRef = React.useRef<HTMLButtonElement>(null);
+
+    // <br /> reference type
+    // const brRef = React.useRef<HTMLBRElement>(null);
+
+    // <a> reference type
+    // const linkRef = React.useRef<HTMLLinkElement>(null);
 
 
     useEffect(() => {
@@ -27,7 +33,7 @@ const Intro: React.FC = () => {
           sr.reveal(refToComponent.current, {})
         }
         if (secondRefToComponent.current) {
-          sr.reveal(secondRefToComponent.current, {})
+          sr.reveal(secondRefToComponent.current, {delay:700})
         }
       }
       animate()
