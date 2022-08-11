@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 
 const Navbar: React.FC = () => {
     
-    const divRef = React.useRef(null);
+    const divRef = useRef(null);
     useEffect(() => {
       const el = divRef.current;
 
