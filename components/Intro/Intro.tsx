@@ -40,8 +40,8 @@ const Intro: React.FC = () => {
     }, [])
 
     return (
-        <div className='dark:bg-green-900 bg-red-200'>  
-          <div className='py-48 dark:bg-green-500 dark:text-white h-screen flex flex-col items-center justify-center'>
+        <div>  
+          <div className="h-screen bg-[url('https://zoltanfodor.b-cdn.net/zoltan_fodor_portfolio_website/bg-noise-portfolio-website.png')] bg-center bg-repeat bg-[length:300px_300px] flex flex-col items-center justify-center bg-[#f9f4ef] dark:bg-[#16161a] dark:text-white text-black">
             <h1 className="headline text-center" ref={refToComponent}>
               Widget Inc.
             </h1>
