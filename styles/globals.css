@@ -12,11 +12,18 @@
 
 /* cursor color */
 html {
-  --cursor-color: #333
+  --cursor-color: #000;
 }
 
-html .dark-mode {
-  --cursor-color: #fff
+@media (prefers-color-scheme: dark) {
+  html {
+    --cursor-color: #fff;
+  }
+}
+@media (prefers-color-scheme: light) {
+  html {
+    --cursor-color: #000;
+  }
 }
 
 @keyframes fadeInUp {

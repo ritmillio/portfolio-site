@@ -13,10 +13,10 @@ const Cursor = () => {
             outerAlpha={0}
             hasBlendMode={true}
             outerStyle={{
-            border: '3px solid var(--cursor-color)'
+              border: '3px solid var(--cursor-color)'
             }}
-            innerStyle={{ 
-            backgroundColor: 'var(--cursor-color)'
+            innerStyle={{
+              backgroundColor: 'var(--cursor-color)'
             }}
         />
 }
