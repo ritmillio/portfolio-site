@@ -19,6 +19,8 @@ html .dark-mode {
   --cursor-color: #fff
 }
 
+
+/* PROGRESS BAR */
 progress {
   position: fixed;
   top: 0;

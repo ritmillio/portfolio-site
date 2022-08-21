@@ -20,12 +20,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       {!loading ? (
-        <ThemeProvider  attribute="class">
+        <ThemeProvider attribute="class">
           <Cursor />
           <Component {...pageProps} />
         </ThemeProvider>
       ) : (
-        <ThemeProvider  attribute="class">
+        <ThemeProvider attribute="class">
           <LoadingDom />
         </ThemeProvider>
       )}

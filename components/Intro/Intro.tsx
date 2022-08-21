@@ -28,7 +28,7 @@ const Intro: React.FC = () => {
 
     return (
         <div>  
-          <div className="h-screen bg-[url('https://zoltanfodor.b-cdn.net/zoltan_fodor_portfolio_website/bg-noise-portfolio-website.png')] bg-center bg-repeat bg-[length:300px_300px] flex flex-col items-center justify-center bg-[#f9f4ef] dark:bg-[#16161a] dark:text-white text-black">
+          <div className="h-screen flex flex-col items-center justify-center bg-[#f9f4ef] dark:bg-[#16161a] dark:text-white text-black">
             <h1 className="headline text-center" ref={refToComponent}>
               Widget Inc.
             </h1>
