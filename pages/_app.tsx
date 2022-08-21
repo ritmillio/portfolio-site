@@ -25,7 +25,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </ThemeProvider>
       ) : (
-        <LoadingDom />
+        <ThemeProvider  attribute="class">
+          <LoadingDom />
+        </ThemeProvider>
       )}
     </>
   )
