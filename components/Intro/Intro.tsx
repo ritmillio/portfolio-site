@@ -7,19 +7,6 @@ const Intro: React.FC = () => {
     const secondRefToComponent = useRef<HTMLHeadingElement>(null)
 
 
-    // <div> reference type
-    
-
-    // <button> reference type
-    // const buttonRef = React.useRef<HTMLButtonElement>(null);
-
-    // <br /> reference type
-    // const brRef = React.useRef<HTMLBRElement>(null);
-
-    // <a> reference type
-    // const linkRef = React.useRef<HTMLLinkElement>(null);
-
-
     useEffect(() => {
       async function animate() {
           const sr = (await require("scrollreveal")).default({
