@@ -6,7 +6,7 @@ const ProgressBar: React.FC = () => {
     const {theme, setTheme} = useTheme();
     
     return(
-        <div className='absolute top-0 right-0'>
+        <div className='absolute top-0 right-0 mr-8 mt-8'>
             {theme === "light" ? (
                 <svg
                 onClick={() => setTheme("dark")}

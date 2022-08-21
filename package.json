@@ -21,7 +21,8 @@
     "react-dom": "18.2.0",
     "react-gsap": "^3.2.1",
     "react-locomotive-scroll": "^0.2.2",
-    "scrollreveal": "^4.0.9"
+    "scrollreveal": "^4.0.9",
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.4",

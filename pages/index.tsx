@@ -15,6 +15,7 @@ const Home: NextPage = () => {
     <>
       <Navbar />
       <Intro />
+      <div className='h-screen'>asd</div>
       <Footer />
     </>
   )

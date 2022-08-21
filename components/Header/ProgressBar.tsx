@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import { gsap } from 'gsap';
+import { ScrollTrigger, } from 'react-gsap';
 
 const ProgressBar: React.FC = () => {
 
@@ -15,7 +16,10 @@ const ProgressBar: React.FC = () => {
     }, [])
 
     return(
-        <progress ref={divRef} max="100" value="0"></progress>
+        <>
+          <progress ref={divRef} max="100" value="0"></progress>
+          <ScrollTrigger></ScrollTrigger>
+        </>
     )
 }
 
