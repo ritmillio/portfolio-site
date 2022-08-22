@@ -10,11 +10,6 @@
   display: none;
 }
 
-/* cursor color */
-html {
-  --cursor-color: #000;
-}
-
 @media (prefers-color-scheme: dark) {
   html {
     --cursor-color: #fff;
@@ -70,10 +65,10 @@ progress::-webkit-progress-bar {
   background: transparent;
 }
 progress::-webkit-progress-value {
-  background: linear-gradient(to left, #db38b5,#01b3e3,#25ce7b,#fdc741,#ff6b01,#fc4236);
+  background: linear-gradient(to left,#01b3e3,#25ce7b);
   background-attachment: fixed;
 }
 progress::-moz-progress-bar {
-  background: linear-gradient(to left, #db38b5,#01b3e3,#25ce7b,#fdc741,#ff6b01,#fc4236);
+  background: linear-gradient(to left,#01b3e3,#25ce7b);
   background-attachment: fixed;
 }

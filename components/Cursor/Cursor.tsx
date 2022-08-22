@@ -24,6 +24,8 @@ const Cursor = () => {
               backgroundColor: 'var(--cursor-color)'
             }}
     />
+  } else {
+    return null;
   }
 }
 
