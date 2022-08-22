@@ -33,9 +33,7 @@ const Intro: React.FC = () => {
                     typewriter.typeString('Hi, my name is Zoltan')
                     .changeDeleteSpeed(25)
                     .deleteChars(21)
-                    .typeString('Creative Frontend Developer')
-                    .deleteChars(18)
-                    .typeString('Ecommerce Developer')
+                    .typeString('Creative Developer')
                     .pauseFor(2500)
                     .callFunction(() => {
                       console.log('All strings were deleted');

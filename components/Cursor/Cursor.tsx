@@ -5,7 +5,12 @@ const AnimatedCursor: any = dynamic(() => import('react-animated-cursor'), {
 });
 
 const Cursor = () => {
-  return <AnimatedCursor
+  
+  //Check if user is on mobile/tablet
+  let touchScreen = window.matchMedia("(pointer:coarse)").matches;
+  
+  if(!touchScreen) {
+    return <AnimatedCursor
             innerSize={8}
             outerSize={70}
             innerScale={1.2}
@@ -18,7 +23,8 @@ const Cursor = () => {
             innerStyle={{
               backgroundColor: 'var(--cursor-color)'
             }}
-        />
+    />
+  }
 }
 
 export default Cursor
