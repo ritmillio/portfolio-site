@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
     setTimeout(() => {
       setLoading(false)
-    }, 2000);
+    }, 1000);
 
   }, []);
 
