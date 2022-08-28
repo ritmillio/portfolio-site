@@ -7,7 +7,7 @@ const ProgressBar: React.FC = () => {
     const {theme, setTheme} = useTheme();
     
     return(
-        <div className='absolute top-0 right-0 mr-8 mt-8'>
+        <div className='absolute top-0 right-0 mr-2 mt-2 sm:mr-4 sm:mt-4 md:mr-8 md:mt-8'>
             {theme === "light" ? (
                 <Image
                     onClick={() => setTheme("dark")}
@@ -15,6 +15,7 @@ const ProgressBar: React.FC = () => {
                     alt="Light mode - Sun"
                     width={40}
                     height={40}
+                    priority
                 />
             ) : (
                 <Image
@@ -23,6 +24,7 @@ const ProgressBar: React.FC = () => {
                     alt="Dark mode - Moon"
                     width={40}
                     height={40}
+                    priority
                 />
             )}
         </div>
