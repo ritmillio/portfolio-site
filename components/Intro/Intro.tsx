@@ -30,8 +30,8 @@ const Intro: React.FC = () => {
     return (
           <div className="h-screen pt-8 flex flex-col items-center justify-center bg-[url('https://zoltanfodor.b-cdn.net/zoltan_fodor_portfolio_website/bg-noise-portfolio-website.png')] bg-center bg-repeat bg-[length:300px_300px] bg-[#f9f4ef] dark:bg-[#16161a] dark:text-white text-black">
             
-            <svg
-              className="h- px-5 z-[1]"
+            {/* <svg
+              className="h-64 px-5 z-[1]"
               viewBox="0 0 276 97"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -56,9 +56,9 @@ const Intro: React.FC = () => {
                   ></motion.path>
                 </Fragment>
               ))}
-            </svg>
+            </svg> */}
 
-            <div className='text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black'>
+            {/* <div className='text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black'>
               <Typewriter
                 onInit={(typewriter) => {
                     typewriter.typeString('Hi, my name is Zoltan')
@@ -73,7 +73,7 @@ const Intro: React.FC = () => {
                 }}
               />
             </div>
-            <div className="scroll-link mt-8 flex items-center justify-center">Scroll down</div>
+            <div className="scroll-link mt-8 flex items-center justify-center">Scroll down</div> */}
           </div>
       )
   }

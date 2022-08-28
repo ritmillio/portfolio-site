@@ -10,15 +10,11 @@
   display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    --cursor-color: #fff;
-  }
+.light {
+  --cursor-color: #f352d3;
 }
-@media (prefers-color-scheme: light) {
-  html {
-    --cursor-color: #000;
-  }
+.dark {
+  --cursor-color: #8db508;
 }
 
 @keyframes fadeInUp {

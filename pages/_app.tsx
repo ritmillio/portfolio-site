@@ -5,33 +5,35 @@ import { ThemeProvider } from 'next-themes'
 import React, { useState, useEffect, useRef } from 'react'
 import LoadingDom from '../components/LoadingDom/LoadingDom'
 import { useRouter } from 'next/router'
+import Cookies from '../components/Cookies/Cookies'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [loading, setLoading] = useState(true);
-  const router = useRouter()
+  // const [loading, setLoading] = useState(true);
+  // const router = useRouter()
 
-  useEffect(() => {
-    if(router.pathname === '/404' || router.pathname === '/500') {
-      setLoading(false)
-    }
-    setTimeout(() => {
-      setLoading(false)
-    }, 1000);
+  // useEffect(() => {
+  //   if(router.pathname === '/404' || router.pathname === '/500') {
+  //     setLoading(false)
+  //   }
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   }, 1000);
 
-  }, []);
+  // }, []);
 
   return (
     <>
-      {!loading ? (
+      {/* {!loading ? ( */}
         <ThemeProvider attribute="class">
           <Cursor />
           <Component {...pageProps} />
+          {/* <Cookies /> */}
         </ThemeProvider>
-      ) : (
-        <ThemeProvider attribute="class">
+      {/* ) : ( */}
+        {/* <ThemeProvider attribute="class">
           <LoadingDom />
-        </ThemeProvider>
-      )}
+        </ThemeProvider> */}
+      {/* )} */}
     </>
   )
 }
