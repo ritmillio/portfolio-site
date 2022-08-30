@@ -11,10 +11,12 @@
 }
 
 .light {
-  --cursor-color: #f352d3;
+  --cursor_border_color: #f25042;
+  --cursor_background_color: #020826;
 }
 .dark {
-  --cursor-color: #8db508;
+  --cursor_border_color: #7f5af0;
+  --cursor_background_color: #fffffe;
 }
 
 body {

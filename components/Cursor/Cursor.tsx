@@ -23,10 +23,10 @@ const Cursor: React.FC = () => {
               outerAlpha={0}
               hasBlendMode={true}
               outerStyle={{
-                border: '3px solid var(--cursor-color)'
+                border: '3px solid var(--cursor_border_color)'
               }}
               innerStyle={{
-                backgroundColor: 'var(--cursor-color)'
+                backgroundColor: 'var(--cursor_background_color)'
               }}
       />
       )
