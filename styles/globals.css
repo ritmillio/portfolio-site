@@ -75,10 +75,10 @@ progress::-webkit-progress-bar {
   background: transparent;
 }
 progress::-webkit-progress-value {
-  background: linear-gradient(to left,#01b3e3,#25ce7b);
+  background: linear-gradient(to left,#7f5af0,#f25042);
   background-attachment: fixed;
 }
 progress::-moz-progress-bar {
-  background: linear-gradient(to left,#01b3e3,#25ce7b);
+  background: linear-gradient(to left,#7f5af0,#f25042);
   background-attachment: fixed;
 }

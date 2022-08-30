@@ -36,7 +36,7 @@ module.exports = {
           background : {
             primary : '#f9f4ef',
             secondary: '#8c7851',
-            button: '#f25042'
+            button: '#db2414'
           },
           text : {
             headline: '#020826',
