@@ -4,34 +4,33 @@ import Typewriter from 'typewriter-effect';
 import { motion } from "framer-motion";
 
 const Intro: React.FC = () => {
+  const refTypewriter = useRef<HTMLDivElement>(null)
+  const refScrollDown = useRef<HTMLAnchorElement>(null)
 
-    const refTypewriter = useRef<HTMLDivElement>(null)
-    const refScrollDown = useRef<HTMLAnchorElement>(null)
-
-    useEffect(() => {
-      async function animate() {
-          const sr = (await require("scrollreveal")).default({
-            origin: "bottom",
-            distance: "40px",
-            duration: 1500,
-            delay: 1600,
-            reset: true,
-        })
-        if (refTypewriter.current) {
-          sr.reveal(refTypewriter.current)
-        }
-        if(refScrollDown.current){
-          sr.reveal(refScrollDown.current, {
-            delay: 7800
-          })
-        }
+  useEffect(() => {
+    async function animate() {
+        const sr = (await require("scrollreveal")).default({
+          origin: "bottom",
+          distance: "40px",
+          duration: 1500,
+          delay: 1600,
+          reset: true,
+      })
+      if (refTypewriter.current) {
+        sr.reveal(refTypewriter.current)
       }
-      animate()
+      if(refScrollDown.current){
+        sr.reveal(refScrollDown.current, {
+          delay: 7800
+        })
+      }
+    }
+    animate()
     }, [])
 
     return (
-          <div className="h-screen bg-[url('https://zoltanfodor.b-cdn.net/zoltan_fodor_portfolio_website/bg-noise-portfolio-website.png')] bg-center bg-repeat bg-[length:300px_300px] bg-[#f9f4ef] dark:bg-[#16161a]">
-            <div className='h-screen container mx-auto flex flex-col items-center justify-center dark:text-white text-black'>
+          <div className="h-screen bg-[url('https://zoltanfodor.b-cdn.net/zoltan_fodor_portfolio_website/bg-noise-portfolio-website.png')] bg-center bg-repeat bg-[length:300px_300px] dark:bg-happyhues_4-background-primary bg-happyhues_11-background-primary">
+            <div className='h-screen container mx-auto flex flex-col items-center justify-center'>
               
               {/* Framer SVG Animation Medium and Larger screens */}
               {/* Dark Mode Intro */}
@@ -95,7 +94,7 @@ const Intro: React.FC = () => {
                   ))}
                 </svg>
               </div>
-              <div ref={ refTypewriter } className='text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl dark:text-white text-black'>
+              <div ref={ refTypewriter } className='text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl dark:text-happyhues_4-text-headline text-happyhues_11-text-headline'>
                 <Typewriter
                   onInit={(typewriter) => {
                       typewriter.typeString('Creative Frontend Developer')
@@ -107,7 +106,7 @@ const Intro: React.FC = () => {
                   }}
                 />
               </div> 
-              <a ref={ refScrollDown } href='#about' className="scroll-link mt-8 flex items-center justify-center text-base sm:text-lg md:text-xl dark:text-white text-black">
+              <a ref={ refScrollDown } href='#about' className="scroll-link mt-8 flex items-center justify-center text-base sm:text-lg md:text-xl dark:text-happyhues_11-background-button text-happyhues_11-background-button">
                 <span>Scroll down</span>
                 <svg className='-ml-[1px]' xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 64 64"><path d="M31.936 46.585L15.643 30.292l-1.414 1.562 17 17.146h1.414l17-17.146-1.414-1.488z"/><path d="M31.936 31.585L15.643 15.292l-1.414 1.562 17 17.146h1.414l17-17.146-1.414-1.488z"/></svg>
               </a>

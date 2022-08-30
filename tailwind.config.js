@@ -14,33 +14,39 @@ module.exports = {
       colors: {
         // dark theme
         // https://www.happyhues.co/palettes/4
-        drk: {
-          bgPrimary: '#16161a',
-          bgSec: '#242629',
-          headline: '#fffffe',
-          p: '#94a1b2',
-          btn: '#7f5af0',
-          btntxt: '#fffffe',
-          stroke: '#010101',
-          main: '#fffffe',
-          highlight: '#7f5af0',
-          primary: '#2cb67d',
-          secondary: '#72757e'
+        happyhues_4: {
+          background : {
+            primary : '#16161a',
+            secondary: '#242629',
+            button: '#7f5af0'
+          },
+          text : {
+            headline: '#fffffe',
+            paragraph: '#94a1b2',
+            sub_paragraph: '#72757e',
+            button: '#fffffe'
+          },
+          stroke: '#010101'
+
         },
+
         // light theme
         // https://www.happyhues.co/palettes/11
-        lght: {
-          background: '#f9f4ef',
-          headline: '#020826',
-          p: '#716040',
-          btn: '#8c7851',
-          btntxt: '#fffffe',
-          stroke: '#020826',
-          main: '#fffffe',
-          highlight: '#8c7851',
-          primary: '#f25042',
-          secondary: '#eaddcf'
-        }
+        happyhues_11: {
+          background : {
+            primary : '#f9f4ef',
+            secondary: '#8c7851',
+            button: '#f25042'
+          },
+          text : {
+            headline: '#020826',
+            paragraph: '#716040',
+            sub_paragraph: '#f9f4ef',
+            button: '#fffffe'
+          },
+          stroke: '#020826'
+
+        },
 
       }
     },
