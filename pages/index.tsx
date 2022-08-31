@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { NextPage, GetStaticProps } from 'next'
 import { NextSeo } from 'next-seo';
 
 // Components ->
@@ -9,23 +9,7 @@ import Projects from '../components/Projects/Projects'
 import Articles from '../components/Articles/Articles';
 import Footer from '../components/Footer/Footer'
 
-// export async function getStaticProps() {
-//   const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@zoltanfodor')
-//   const articles = await res.json()
-
-//   console.log(articles)
-//   return {
-//     props: {
-//       articles,
-//     },
-//     // Next.js will attempt to re-generate the page:
-//     // - When a request comes in
-//     // - At most once every 10 seconds
-//     // revalidate: 15, // In seconds
-//   }
-// }
-
-const Home: NextPage = ( {} ) => {
+const Home: NextPage = () => {
 
   return (
     <>
@@ -65,9 +49,11 @@ const Home: NextPage = ( {} ) => {
       />
       <Navbar />
       <Intro />
-      <About />
-      <Projects />
-      <Articles />
+      <main>
+        <About />
+        <Projects />
+        <Articles />
+      </main>
       <Footer />
     </>
   )

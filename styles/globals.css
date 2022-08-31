@@ -10,6 +10,10 @@
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .light {
   --cursor_border_color: #f25042;
   --cursor_background_color: #020826;
