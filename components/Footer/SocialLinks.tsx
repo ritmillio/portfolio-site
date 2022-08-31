@@ -24,7 +24,7 @@ const SocialLinks: React.FC = () => {
 
     return (
         <>
-         <div className="h-36 sm:h-40 bg-[url('https://zoltanfodor.b-cdn.net/zoltan_fodor_portfolio_website/bg-noise-portfolio-website.png')] bg-center bg-repeat bg-[length:300px_300px] dark:bg-happyhues_4-background-secondary bg-happyhues_11-background-primary md:mt-20 lg:mt-24">
+         <div className="h-36 sm:h-40 md:h-48 lg:h-56 dark:bg-happyhues_4-background-secondary bg-happyhues_11-background-primary md:mt-20 lg:mt-24">
             <div ref={divRef} className="h-full flex items-center justify-center">
               <a className="mx-2 sm:mx-4  lg:mx-6" href="#" target="_blank" rel="noreferrer">
                 <Image
