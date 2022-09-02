@@ -1,4 +1,4 @@
-import type { NextPage, GetStaticProps } from 'next'
+import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo';
 
 // Components ->
@@ -10,34 +10,33 @@ import Articles from '../components/Articles/Articles';
 import Footer from '../components/Footer/Footer'
 
 const Home: NextPage = () => {
-
   return (
     <>
       <NextSeo
         title="Zoltan Fodor - Portfolio Website"
-        description="My Personal Portfolio Website created with Next.js, Tailwindcss, "
+        description="Hi , my name is Zoltan. I am a Creative Developer. I design and build websites and web applications. Let’s get in touch and work together on your next project."
         canonical="https://www.canonical.ie/"
         openGraph={{
-          url: 'https://www.url.ie/a',
+          url: 'https://zoltanfodor.b-cdn.net/zoltan-fodor-resi-prof.jpeg',
           title: 'Zoltan Fodor - Creative Developer',
           description: 'Hi , my name is Zoltan. I am a Creative Developer. I design and build websites and web applications. Let’s get in touch and work together on your next project',
           images: [
             {
-              url: 'https://www.example.ie/og-image-01.jpg',
-              width: 800,
-              height: 600,
-              alt: 'Og Image Alt',
+              url: 'https://zoltanfodor.b-cdn.net/zoltan-fodor-resi-prof.jpeg',
+              width: 512,
+              height: 768,
+              alt: 'Zoltan Fodor - Creative Developer',
               type: 'image/jpeg',
             },
             {
-              url: 'https://www.example.ie/og-image-02.jpg',
-              width: 900,
-              height: 800,
-              alt: 'Og Image Alt Second',
+              url: 'https://zoltanfodor.b-cdn.net/zoltan-fodor-resi-prof.jpeg',
+              width: 612,
+              height: 968,
+              alt: 'Zoltan Fodor - Creative Developer',
               type: 'image/jpeg',
             },
-            { url: 'https://www.example.ie/og-image-03.jpg' },
-            { url: 'https://www.example.ie/og-image-04.jpg' },
+            { url: 'https://zoltanfodor.b-cdn.net/zoltan-fodor-resi-prof.jpeg' },
+            { url: 'https://zoltanfodor.b-cdn.net/zoltan-fodor-resi-prof.jpeg' },
           ],
           site_name: 'SiteName',
         }}
@@ -47,14 +46,18 @@ const Home: NextPage = () => {
           cardType: 'summary_large_image',
         }}
       />
-      <Navbar />
-      <Intro />
-      <main>
-        <About />
-        <Projects />
-        <Articles />
-      </main>
-      <Footer />
+        <nav>
+          <Navbar />
+        </nav>
+        <Intro />
+        <main>
+          <About />
+          <Projects />
+          <Articles />
+        </main>
+        <footer>
+          <Footer />
+        </footer>
     </>
   )
 }
