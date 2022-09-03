@@ -10,6 +10,7 @@ import Articles from '../components/Articles/Articles';
 import Footer from '../components/Footer/Footer'
 
 const Home: NextPage = () => {
+
   return (
     <>
       <NextSeo
@@ -45,6 +46,17 @@ const Home: NextPage = () => {
           site: '@site',
           cardType: 'summary_large_image',
         }}
+        additionalLinkTags={[
+          {
+            rel: 'icon',
+            href: 'https://zoltanfodor.b-cdn.net/fav-zoli.png',
+          },
+          {
+            rel: 'apple-touch-icon',
+            href: 'https://zoltanfodor.b-cdn.net/fav-zoli.png',
+            sizes: '76x76'
+          },
+        ]}
       />
         <nav>
           <Navbar />

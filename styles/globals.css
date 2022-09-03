@@ -3,64 +3,34 @@
 @tailwind utilities;
 
 /* remove scrollbar */
-*{
+* {
   -ms-overflow-style: none;
 }
+
 ::-webkit-scrollbar {
   display: none;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 .light {
   --cursor_border_color: #f25042;
   --cursor_background_color: #020826;
 }
+
 .dark {
   --cursor_border_color: #7f5af0;
   --cursor_background_color: #fffffe;
+}
+
+html {
+  overscroll-behavior-x: none;
 }
 
 body {
   font-family: 'Alumni Sans Pinstripe', sans-serif;
 }
 
-body :is(h1,h2,h3,h4,h5,h6) {
+body :is(h1, h2, h3, h4, h5, h6) {
   font-family: 'Oswald', sans-serif;
-}
-
-@keyframes fadeInUp {
-  to {
-      opacity: 1;
-      transform: translateY(0)
-  }
-}
-@keyframes fadeOut {
-  from {
-      opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: translateY(0)
-  }
-}
-.intro-svg {
-  width: 312px;
-}
-@media screen and (min-width:412px) and (max-width:639px){
-  .intro-svg { 
-    width: 400px;
-  }
-}
-
-.loading-dom {
-  animation: fadeOut 1s ease calc(1.5s) forwards;
-}
-
-.scroll-link {
-  writing-mode: vertical-lr;
 }
 
 /* PROGRESS BAR */
@@ -75,14 +45,53 @@ progress {
   border: none;
   background: transparent;
 }
+
 progress::-webkit-progress-bar {
   background: transparent;
 }
+
 progress::-webkit-progress-value {
-  background: linear-gradient(to left,#7f5af0,#f25042);
+  background: linear-gradient(to left, #7f5af0, #f25042);
   background-attachment: fixed;
 }
+
 progress::-moz-progress-bar {
-  background: linear-gradient(to left,#7f5af0,#f25042);
+  background: linear-gradient(to left, #7f5af0, #f25042);
   background-attachment: fixed;
+}
+
+.intro-svg {
+  width: 312px;
+}
+
+@media screen and (min-width:412px) and (max-width:639px) {
+  .intro-svg {
+    width: 400px;
+  }
+}
+
+.loading-dom {
+  animation: fadeOut 1s ease calc(1.5s) forwards;
+}
+
+.scroll-link {
+  writing-mode: vertical-lr;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(0)
+  }
 }

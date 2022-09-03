@@ -1,61 +1,57 @@
 import React, { useRef, useEffect } from 'react'
+import useSWR from 'swr'
+import { fetcher } from '../../fetcher'
+
+import ArticleCard from './ArticleCard'
+
 
 const Articles: React.FC = () => {
 
-    const refToComponent = useRef<HTMLHeadingElement>(null)
-    const secondRefToComponent = useRef<HTMLHeadingElement>(null)
+  const { data, error } = useSWR('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@zoltanfodor', fetcher)
+  const refToComponent = useRef<HTMLHeadingElement>(null)
 
-    useEffect(() => {
-      async function animate() {
-          const sr = (await require("scrollreveal")).default({
-            origin: "top",
-            distance: "60px",
-            duration: 2500,
-            delay: 400,
-            reset: true,
-        })
-        if (refToComponent.current) {
-          sr.reveal(refToComponent.current, {})
-        }
-        if (secondRefToComponent.current) {
-          sr.reveal(secondRefToComponent.current, {delay:700})
-        }
+  useEffect(() => {
+    async function animate() {
+        const sr = (await require("scrollreveal")).default({
+          origin: "top",
+          distance: "60px",
+          duration: 2500,
+          delay: 400,
+          reset: true,
+      })
+      if (refToComponent.current) {
+        sr.reveal(refToComponent.current, {})
       }
-      animate()
-    }, [])
+    }
+    animate()
+  }, [])
 
-    return (
-          <div className="h-screen flex flex-col items-center justify-center bg-[url('https://zoltanfodor.b-cdn.net/zoltan_fodor_portfolio_website/bg-noise-portfolio-website.png')] bg-center bg-repeat bg-[length:300px_300px] bg-[#f9f4ef] dark:bg-[#16161a] dark:text-white text-black">
-            <div ref={refToComponent}>About</div>
-            <div ref={secondRefToComponent}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim magni ipsum, porro, asperiores quisquam laborum veniam laboriosam eos tempore distinctio, quae et. Consequuntur iusto esse, dicta quos molestiae quasi sed.
-            </div>
+  if (error) return <div>Failed to load</div>
+  if (!data) return <div>Loading...</div>
+
+  console.log(data)
+
+  return (
+        <div className="min-h-screen flex flex-col items-center bg-[url('https://zoltanfodor.b-cdn.net/zoltan_fodor_portfolio_website/bg-noise-portfolio-website.png')] bg-center bg-repeat bg-[length:300px_300px] dark:bg-happyhues_4-background-secondary  bg-happyhues_11-background-primary">
+        <div className='container mx-auto py-20 px-4'>
+          <h2 className='uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl dark:text-happyhues_4-text-headline text-happyhues_11-text-headline' ref= {refToComponent}>
+            Articles
+          </h2>
+          <a href={data.feed.feed} rel="noreferrer" className='underline pt-2 pb-6 pl-[1px] dark:hover:text-happyhues_4-background-button hover:text-happyhues_11-background-button'>
+            { data.feed.description }
+          </a>
+          <div className='flex items-center'>
+          {data.items.map(( article: any ) => {
+              return (
+                <>    
+                  <ArticleCard key={article.pubDate} link={article.link} title={article.title} description={article.description.split('<p>')[1].split('</p>')[0]} imageURL={article.thumbnail}/>
+                </>
+              );
+            })}
           </div>
-      )
-  }
-  
-  export default Articles
-  
+        </div>
+      </div>
+    )
+}
 
-
-//   import React, { useRef } from "react";
-
-// const Child = React.forwardRef((props, ref) => {
-//   const { ref1, ref2 } = ref.current;
-//   console.log(ref1, ref2);
-
-//   return (
-//     <>
-//       <p ref={ref1}>foo</p>
-//       <p ref={ref2}>bar</p>
-//     </>
-//   );
-// });
-
-// export default function App() {
-//   const ref1 = useRef();
-//   const ref2 = useRef();
-//   const ref = useRef({ ref1, ref2 });
-
-//   return <Child ref={ref} />;
-// }
+export default Articles

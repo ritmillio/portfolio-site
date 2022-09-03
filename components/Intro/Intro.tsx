@@ -1,21 +1,18 @@
-import React, { useRef, useEffect, Fragment } from 'react'
-import { chars } from '../../public/svg-intro'
+import React, { useRef, useEffect, Fragment } from 'react';
+import { chars } from '../../public/svg-intro';
 import Typewriter from 'typewriter-effect';
 import { motion } from "framer-motion";
+import { reveal } from '../../reveal'
+
 
 const Intro: React.FC = () => {
-  const refTypewriter = useRef<HTMLDivElement>(null)
-  const refScrollDown = useRef<HTMLAnchorElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null);
+  const refTypewriter = useRef<HTMLDivElement>(null);
+  const refScrollDown = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     async function animate() {
-        const sr = (await require("scrollreveal")).default({
-          origin: "bottom",
-          distance: "40px",
-          duration: 1500,
-          delay: 1600,
-          reset: true,
-      })
+        const sr = (await require("scrollreveal")).default(reveal);
       if (refTypewriter.current) {
         sr.reveal(refTypewriter.current)
       }
@@ -25,21 +22,24 @@ const Intro: React.FC = () => {
         })
       }
     }
-    animate()
+    animate();
     }, [])
 
     return (
-          <div className="h-screen bg-[url('https://zoltanfodor.b-cdn.net/zoltan_fodor_portfolio_website/bg-noise-portfolio-website.png')] bg-center bg-repeat bg-[length:300px_300px] dark:bg-happyhues_4-background-primary bg-happyhues_11-background-primary">
+          <div ref={ containerRef } className="h-screen bg-[url('https://zoltanfodor.b-cdn.net/zoltan_fodor_portfolio_website/bg-noise-portfolio-website.png')] bg-center bg-repeat bg-[length:300px_300px] dark:bg-happyhues_4-background-primary bg-happyhues_11-background-primary">
             <div className='h-screen container mx-auto flex flex-col items-center justify-center'>
               
+              {/* Add h1 tag for better SEO */}
+              <h1 className='absolute invisible'>Zoltan Fodor - Frontend & Ecommerce Developer</h1>
+
               {/* Framer SVG Animation Medium and Larger screens */}
               {/* Dark Mode Intro */}
               <div className='hidden dark:block'>
                   <svg
-                    className="w-[312px] intro-svg sm:w-[620px] md:w-[740px] lg:w-[990px] h-auto z-10"
-                    viewBox="0 0 690 150"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                    className='w-[312px] intro-svg sm:w-[620px] md:w-[740px] lg:w-[990px] h-auto z-10'
+                    viewBox='0 0 690 150'
+                    fill='none'
+                    xmlns='http://www.w3.org/2000/svg'
                   >
                     {chars.map((character, index) => (
                       <Fragment key={ character }>
@@ -48,15 +48,15 @@ const Intro: React.FC = () => {
                           animate={{ pathLength: 1 }}
                           transition={{ delay: index / 10, duration: 1 }}
                           d={ character }
-                          fill="none"
-                          stroke="#FFF"
-                          strokeWidth="1"
+                          fill='none'
+                          stroke='#FFF'
+                          strokeWidth='1'
                         ></motion.path>
                         <motion.path
-                          initial={{ fill: "#ffffff00" }}
-                          animate={{ fill: "#ffffff" }}
+                          initial={{ fill: '#ffffff00' }}
+                          animate={{ fill: '#ffffff' }}
                           transition={{ delay: 0.7 + index / 10, duration: 0.6 }}
-                          fill="none"
+                          fill='none'
                           d={ character }
                         ></motion.path>
                       </Fragment>
@@ -67,10 +67,10 @@ const Intro: React.FC = () => {
               {/* Light Mode Intro */}
               <div className='dark:hidden block'>
                 <svg
-                  className="w-[312px] intro-svg sm:w-[620px] md:w-[740px] lg:w-[990px] h-auto z-10"
-                  viewBox="0 0 690 150"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  className='w-[312px] intro-svg sm:w-[620px] md:w-[740px] lg:w-[990px] h-auto z-10'
+                  viewBox='0 0 690 150'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
                 >
                   {chars.map((character, index) => (
                     <Fragment key={ character }>
@@ -79,15 +79,15 @@ const Intro: React.FC = () => {
                         animate={{ pathLength: 1 }}
                         transition={{ delay: index / 10, duration: 1 }}
                         d={ character }
-                        fill="none"
-                        stroke="#000"
-                        strokeWidth="1"
+                        fill='none'
+                        stroke='#000'
+                        strokeWidth='1'
                       ></motion.path>
                       <motion.path
-                        initial={{ fill: "#00000ff" }}
-                        animate={{ fill: "#000" }}
+                        initial={{ fill: '#00000ff' }}
+                        animate={{ fill: '#000' }}
                         transition={{ delay: 0.7 + index / 10, duration: 0.6 }}
-                        fill="none"
+                        fill='none'
                         d={ character }
                       ></motion.path>
                     </Fragment>
@@ -106,9 +106,9 @@ const Intro: React.FC = () => {
                   }}
                 />
               </div> 
-              <a ref={ refScrollDown } href='#about' className="scroll-link mt-8 flex items-center justify-center text-base sm:text-lg md:text-xl dark:text-happyhues_11-background-button text-happyhues_11-background-button">
-                <span>Scroll down</span>
-                <svg className='-ml-[1px]' xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 64 64"><path d="M31.936 46.585L15.643 30.292l-1.414 1.562 17 17.146h1.414l17-17.146-1.414-1.488z"/><path d="M31.936 31.585L15.643 15.292l-1.414 1.562 17 17.146h1.414l17-17.146-1.414-1.488z"/></svg>
+              <a ref={ refScrollDown } href='#about' className='scroll-link mt-8 flex items-center justify-center text-base sm:text-lg md:text-xl dark:text-happyhues_11-background-button text-happyhues_11-background-button'>
+                <span className='font-semibold'>Scroll down</span>
+                <svg className='-ml-[1px]' xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 64 64'><path d='M31.936 46.585L15.643 30.292l-1.414 1.562 17 17.146h1.414l17-17.146-1.414-1.488z'/><path d='M31.936 31.585L15.643 15.292l-1.414 1.562 17 17.146h1.414l17-17.146-1.414-1.488z'/></svg>
               </a>
             </div>
           </div>

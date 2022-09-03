@@ -37,8 +37,6 @@ const ContactMe: React.FC = () => {
                 </p>
                 { value === true ?
                   <>
-                    <p className='absolute bottom-50 right-0 -rotate-[12deg] mt-10 text-2xl tracking-widest -mr-32'>It's time to start something amazing!
-                    </p>
                     <div className='absolute top-0 left-0 -ml-16 sm:-ml-20 md:-ml-24 lg:-ml-28 mt-8 md:mt-10 lg:mt-12 flex flex-col items-center justify-center'>
                       <Image 
                         className='rotate-90'
