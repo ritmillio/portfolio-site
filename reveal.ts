@@ -1,5 +1,5 @@
 export const reveal = {
-    origin: "left",
+    origin: "top",
     distance: "40px",
     duration: 1500,
     delay: 400,
