@@ -46,8 +46,8 @@ const Projects: React.FC = () => {
           </h6>
           <div className='flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-10 xl:gap-12 pt-6 lg:pt-12'>
             
-              <a href="https://winwithme.hu" target="_blank" rel="noreferrer">
-                <div ref={imageRefComponent} className='relative h-[150px] w-[290px] md:h-[200px] md:w-[350px] hover:scale-110 transform-gpu transition-all'>
+              <a href="https://winwithme.hu" target="_blank" rel="noreferrer" className='hover:scale-110 transform-gpu transition-all'>
+                <div ref={imageRefComponent} className='relative h-[150px] w-[290px] md:h-[200px] md:w-[350px]'>
                   <Image 
                       className='absolute rounded-md'
                       src='https://zoltanfodor.b-cdn.net/projects/winwithme-intro.png'
@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
                   />
                 </div>
               </a>
-              <a href="https://www.nespresso.com/hu/hu" target="_blank" rel="noreferrer">
+              <a href="https://www.nespresso.com/hu/hu" target="_blank" rel="noreferrer" className='hover:scale-110 transform-gpu transition-all'>
                 <div ref={imageSecRefComponent} className='relative h-[150px] w-[290px] md:h-[200px] md:w-[350px] hover:scale-110 transform-gpu transition-all'>
                   <Image 
                       className='absolute rounded-md'
@@ -68,7 +68,7 @@ const Projects: React.FC = () => {
                   />
                 </div>
               </a>
-              <a href="https://masterofmixes.dk/" target="_blank" rel="noreferrer">
+              <a href="https://masterofmixes.dk/" target="_blank" rel="noreferrer" className='hover:scale-110 transform-gpu transition-all'>
                 <div ref={imageThirdRefComponent} className='relative h-[150px] w-[290px] md:h-[200px] md:w-[350px] hover:scale-110 transform-gpu transition-all'>
                   <Image 
                       className='absolute rounded-md'
@@ -79,7 +79,7 @@ const Projects: React.FC = () => {
                   />
                 </div>
               </a>
-              <a href="https://nailster.dk/" target="_blank" rel="noreferrer">
+              <a href="https://nailster.dk/" target="_blank" rel="noreferrer" className='hover:scale-110 transform-gpu transition-all'>
                 <div ref={imageFourthRefComponent} className='relative h-[150px] w-[290px] md:h-[200px] md:w-[350px] hover:scale-110 transform-gpu transition-all'>
                   <Image 
                       className='absolute rounded-md'
@@ -90,7 +90,7 @@ const Projects: React.FC = () => {
                   />
                 </div>
               </a>
-              <a href="https://pearlwax.dk/" target="_blank" rel="noreferrer">
+              <a href="https://pearlwax.dk/" target="_blank" rel="noreferrer" className='hover:scale-110 transform-gpu transition-all'>
                 <div ref={imageFifthRefComponent} className='relative h-[150px] w-[290px] md:h-[200px] md:w-[350px] hover:scale-110 transform-gpu transition-all'>
                   <Image 
                       className='absolute rounded-md'
