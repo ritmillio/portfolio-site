@@ -33,6 +33,7 @@ body :is(h1, h2, h3, h4, h5, h6) {
   font-family: 'Oswald', sans-serif;
 }
 
+
 /* PROGRESS BAR */
 progress {
   position: fixed;
@@ -61,7 +62,7 @@ progress::-moz-progress-bar {
 }
 
 .intro-svg {
-  width: 312px;
+  width: 310px;
 }
 
 @media screen and (min-width:412px) and (max-width:639px) {

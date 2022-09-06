@@ -17,9 +17,9 @@ const ProgressBar: React.FC = () => {
                     <path fill='#e82327' d='M32 0C20.7 0 11.54 9.15 11.54 20.45 11.54 31.75 32 58.74 32 58.74s20.45-26.99 20.45-38.29S43.3 0 32 0zm0 33.99c-7.48 0-13.54-6.06-13.54-13.54S24.52 6.91 32 6.91c7.48 0 13.54 6.06 13.54 13.54S39.48 33.99 32 33.99z'></path>
                 </svg>
                 <span className='px-2 text-sm uppercase'>LAT: {data.coord.lon}</span>
-                <span className='px-2 text-sm uppercase'>LONG: {data.coord.lat}</span>
-                <span className='px-2 text-sm uppercase flex items-center justify-center'>
-                    <span>{data.weather[0].main}</span>
+                <span className='pl-2 sm:px-2 text-sm uppercase'>LONG: {data.coord.lat}</span>
+                <span className='sm:px-2 text-sm uppercase flex items-center justify-center'>
+                    <span className='hidden sm:block'>{data.weather[0].main}</span>
                     <span className='px-2 pt-2'>~</span>
                     <span>{Math.round((data.main.temp - 273.15) * 100) / 100}&deg;C</span>
                 </span>
