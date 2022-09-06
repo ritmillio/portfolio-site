@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react'
+import Project from '../Projects/Project'
 
 const Projects: React.FC = () => {
     const refToComponent = useRef<HTMLHeadingElement>(null)
@@ -29,9 +30,12 @@ const Projects: React.FC = () => {
           <h2 className='uppercase text-right text-5xl sm:text-6xl md:text-7xl lg:text-8xl dark:text-happyhues_4-text-headline text-happyhues_11-text-headline' ref= {refToComponent}>
             Projects
           </h2>
-          <p className='underline pt-2 pb-6 pr-[1px] text-right'>
+          <h6 className='underline pt-2 pb-6 pr-[1px] text-right italic'>
             Some of the biggest Projects I have been working on.
-          </p>
+          </h6>
+          <div className='flex md:flex-row flex-wrap items-center justify-center'>
+            {/* <Project /> */}
+          </div>
         </div>
       </div>
     )

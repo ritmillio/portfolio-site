@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import useSWR from 'swr'
 import { fetcher } from '../../fetcher'
 
-import ArticleCard from './ArticleCard'
+import Article from './Article'
 
 
 const Articles: React.FC = () => {
@@ -37,15 +37,13 @@ const Articles: React.FC = () => {
           <h2 className='uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl dark:text-happyhues_4-text-headline text-happyhues_11-text-headline' ref= {refToComponent}>
             Articles
           </h2>
-          <a href={data.feed.feed} rel="noreferrer" className='underline pt-2 pb-6 pl-[1px] dark:hover:text-happyhues_4-background-button hover:text-happyhues_11-background-button'>
-            { data.feed.description }
+          <a href={data.feed.feed} rel="noreferrer" className='italic underline pt-2 pb-6 pl-[1px] dark:hover:text-happyhues_4-background-button hover:text-happyhues_11-background-button'>
+            <h6>{ data.feed.description }</h6>
           </a>
           <div className='flex items-center'>
           {data.items.map(( article: any ) => {
               return (
-                <>    
-                  <ArticleCard key={article.pubDate} link={article.link} title={article.title} description={article.description.split('<p>')[1].split('</p>')[0]} imageURL={article.thumbnail}/>
-                </>
+                <Article key={article.guide} link={article.link} title={article.title} description={article.description.split('<p>')[1].split('</p>')[0]} imageURL={article.thumbnail}/>
               );
             })}
           </div>

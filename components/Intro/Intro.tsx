@@ -12,13 +12,16 @@ const Intro: React.FC = () => {
 
   useEffect(() => {
     async function animate() {
-        const sr = (await require("scrollreveal")).default(reveal);
+      const sr = (await require("scrollreveal")).default(reveal);
       if (refTypewriter.current) {
-        sr.reveal(refTypewriter.current)
+        sr.reveal(refTypewriter.current, {
+          reset: 'false'
+        })
       }
       if(refScrollDown.current){
         sr.reveal(refScrollDown.current, {
-          delay: 7800
+          delay: 7300,
+          reset: 'false'
         })
       }
     }
@@ -55,7 +58,7 @@ const Intro: React.FC = () => {
                         <motion.path
                           initial={{ fill: '#ffffff00' }}
                           animate={{ fill: '#ffffff' }}
-                          transition={{ delay: 0.7 + index / 10, duration: 0.6 }}
+                          transition={{ delay: 0.6 + index / 10, duration: 0.7 }}
                           fill='none'
                           d={ character }
                         ></motion.path>
@@ -86,7 +89,7 @@ const Intro: React.FC = () => {
                       <motion.path
                         initial={{ fill: '#00000ff' }}
                         animate={{ fill: '#000' }}
-                        transition={{ delay: 0.7 + index / 10, duration: 0.6 }}
+                        transition={{ delay: 0.6 + index / 10, duration: 0.7 }}
                         fill='none'
                         d={ character }
                       ></motion.path>
