@@ -57,7 +57,7 @@ const SocialLinks: React.FC = () => {
         <>
          <div className="h-36 sm:h-40 md:h-48 lg:h-56 dark:bg-happyhues_4-background-secondary bg-happyhues_11-background-primary md:mt-20 lg:mt-24">
             <div className="h-full flex items-center justify-center">
-              <a ref={logoRefYoutube} className="mx-2 sm:mx-4  lg:mx-6" href="#" target="_blank" rel="noreferrer">
+              {/* <a ref={logoRefYoutube} className="mx-2 sm:mx-4  lg:mx-6" href="#" target="_blank" rel="noreferrer">
                 <Image
                         loading="lazy"
                         src="https://zoltanfodor.b-cdn.net/youtube-icon.png"
@@ -65,7 +65,7 @@ const SocialLinks: React.FC = () => {
                         height={50}
                         alt="Follow me on YouTube"
                 />
-              </a>
+              </a> */}
               <a ref={logoRefLinkedIn} className="mx-2 sm:mx-4  lg:mx-6" href="https://www.linkedin.com/in/zoltan-fodor-007/" target="_blank" rel="noreferrer">
                 <div className="hidden lg:block">
                     <Image
@@ -113,8 +113,7 @@ const SocialLinks: React.FC = () => {
                         alt="Listen my dev music chanel on spotify"
                 />
               </a>
-
-              <a ref={logoRefBuyMeACoffee} className="mx-2 sm:mx-4 lg:mx-6" href="https://www.buymeacoffee.com/zoltanfodor" target="_blank" rel="noreferrer">
+              {/* <a ref={logoRefBuyMeACoffee} className="mx-2 sm:mx-4 lg:mx-6" href="https://www.buymeacoffee.com/zoltanfodor" target="_blank" rel="noreferrer">
                 <div className="hidden lg:block">
                     <Image
                             loading="lazy"
@@ -133,7 +132,7 @@ const SocialLinks: React.FC = () => {
                             alt="Support me via Buymeacoffee.com but just if you like my content"
                     />
                 </div>
-              </a>
+              </a> */}
             </div>
           </div>
         </>
