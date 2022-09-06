@@ -65,7 +65,7 @@ const Home: NextPage = () => {
         <main>
           <About />
           <Projects />
-          <Articles />
+          {/* <Articles /> */}
         </main>
         <footer>
           <Footer />

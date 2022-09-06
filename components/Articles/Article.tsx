@@ -1,27 +1,23 @@
 import React from 'react'
 
 type Props = {
-    key: string,
     link: string,
     title: string,
     description : string,
     imageURL: string,
 }
 
-const Article: React.FC<Props> = ({key, link, title, description, imageURL}) => {
+const Article: React.FC<Props> = ({ link, title, description, imageURL}) => {
     return (
-        <article className='relative min-h-32 dark:bg-happyhues_4-background-primary bg-happyhues_11-background-primary mx-4 my-2 min-h-[100px] min-w-[250px] ' key={key}>
-            <img  
-                className='absolute rounded-md'
-                src={imageURL}
-                loading='lazy'
-                alt='Zoltan Fodor - Creative Developer'
-            />
-            <a className='' href={link}>
-                <div>{title}</div>
-                <div dangerouslySetInnerHTML={{
-                    __html: description
-                }}></div>
+        <article key={ link }>
+            <a href={link} target="_blank" rel="noreferrer">
+                <div className='relative h-[150px] w-[290px] md:h-[200px] md:w-[350px] hover:scale-110 transform-gpu transition-all'>
+                    <img src={imageURL} alt={title} className='hover:opacity-100 opacity-50 w-full h-full object-fill absolute rounded-md' loading='lazy'/>
+                    <div className='absolute bottom-0 mb-4 ml-4'>
+                        <h5 className='text-white'>{ title }</h5>
+                        <p className='text-white'>{ description }</p>
+                    </div>
+                </div>
             </a>
         </article>
     )

@@ -40,10 +40,10 @@ const Articles: React.FC = () => {
           <a href={data.feed.feed} rel="noreferrer" className='italic underline pt-2 pb-6 pl-[1px] dark:hover:text-happyhues_4-background-button hover:text-happyhues_11-background-button'>
             <h6>{ data.feed.description }</h6>
           </a>
-          <div className='hidden flex items-center'>
+          <div className='flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-10 xl:gap-12 pt-6 lg:pt-12'>
           {data.items.map(( article: any ) => {
               return (
-                <Article key={article.guide} link={article.link} title={article.title} description={article.description.split('<p>')[1].split('</p>')[0]} imageURL={article.thumbnail}/>
+                <Article key={article.link} link={article.link} title={article.title} description={article.description.split('<p>')[1].split('</p>')[0]} imageURL={article.thumbnail}/>
               );
             })}
           </div>
