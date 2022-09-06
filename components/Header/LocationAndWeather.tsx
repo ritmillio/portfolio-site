@@ -5,8 +5,8 @@ import { fetcher } from '../../fetcher';
 const ProgressBar: React.FC = () => {
     const { data, error } = useSWR(`https://api.openweathermap.org/data/2.5/weather?lat=47.497913&lon=19.040236&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}`, fetcher);
 
-    if (error) return <div className='hidden'></div>
-    if (!data) return <div className='hidden'></div>
+    if (error) return <div className=''>error</div>
+    if (!data) return <div className=''>erro</div>
 
     return(
         <div className='absolute top-0 left-0 ml-2 sm:ml-4 mt-4 md:ml-8 md:mt-10'>
