@@ -6,7 +6,7 @@ import Navbar from '../components/Header/Navbar'
 import Intro from '../components/Intro/Intro'
 import About from '../components/About/About'
 import Projects from '../components/Projects/Projects'
-import Articles from '../components/Articles/Articles';
+// import Articles from '../components/Articles/Articles';
 import Footer from '../components/Footer/Footer'
 
 const Home: NextPage = () => {
