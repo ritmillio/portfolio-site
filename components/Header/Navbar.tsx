@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
   return (
       <>
         <ProgressBar />
-        {/* <LocationAndWeather/> */}
+        <LocationAndWeather/>
         <ThemeToggle />
       </>
     )
