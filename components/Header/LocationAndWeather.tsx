@@ -3,7 +3,7 @@ import useSWR from 'swr';
 import { fetcher } from '../../fetcher';
 
 const ProgressBar: React.FC = () => {
-    const { data, error } = useSWR(`https://api.openweathermap.org/data/2.5/weather?lat=47.497913&lon=19.040236&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}`, fetcher);
+    const { data, error } = useSWR('https://api.openweathermap.org/data/2.5/weather?lat=47.497913&lon=19.040236&appid=368d66f23cd527b82bac2c9d6dd1017d', fetcher);
 
     if (error) return <div></div>
     if (!data) return <div></div>
