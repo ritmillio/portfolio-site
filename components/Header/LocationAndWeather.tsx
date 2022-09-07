@@ -8,6 +8,8 @@ const ProgressBar: React.FC = () => {
     if (error) return <div></div>
     if (!data) return <div></div>
 
+    console.log(data)
+
     return(
         <div className='absolute top-0 left-0 ml-2 sm:ml-4 mt-4 md:ml-8 md:mt-10'>
             <div className='flex items-center justify-center'>
