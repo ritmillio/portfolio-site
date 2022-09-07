@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
+import Script from 'next/script'
 import { NextSeo } from 'next-seo';
-
 // Components ->
 import Navbar from '../components/Header/Navbar'
 import Intro from '../components/Intro/Intro'
@@ -13,6 +13,19 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-NDZH17VXRN"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-NDZH17VXRN');
+        `}
+      </Script>
       <NextSeo
         title="Zoltan Fodor - Portfolio Website"
         description="Hi , my name is Zoltan. I am a Creative Developer. I design and build websites and web applications. Let’s get in touch and work together on your next project."
@@ -57,7 +70,7 @@ const Home: NextPage = () => {
             sizes: '76x76'
           },
         ]}
-      />
+        />
         <nav>
           <Navbar />
         </nav>
