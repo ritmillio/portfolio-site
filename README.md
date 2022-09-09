@@ -18,10 +18,10 @@ My portfolio website built with Next.js, Tailwindcss, Framer Motion, GSAP, Scrol
 ![site-demo](https://zoltanfodor.b-cdn.net/zoltanfodor-dev-intro.png)
 
 ## Project Goal 
-- First thing first I wanted to create a really good portfolio site myself..(let me know if I succeeded in it)
+- First things first I wanted to create a really good portfolio site myself..(let me know if I succeeded in it)
 - I wanted to contribute open-source
-- You can use this project as inspiration OR
-- You can use this template as a starting point of yours BUT please remove all my cdn-image urls and mention me somewhere on your site or refer back to [my portfolio](https://zoltanfodor.dev)
+- You can use this project as an inspiration OR
+- You can use this template as a starting point of your portfolio BUT please remove all my cdn-image urls and mention me somewhere on your site or refer back to [my portfolio](https://zoltanfodor.dev)
 
 :star: If you really like this project give me a Star :star:
 
