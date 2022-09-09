@@ -29,7 +29,7 @@ My portfolio website built with Next.js, Tailwindcss, Framer Motion, GSAP, Scrol
 :star: If you really like this project give me a Star :star:
 
 ### Colors Palette 
-    - I use Happy Hues color palettes for my light(11)/dark(4) theme -> [Happy Hues Color Palettes](https://www.happyhues.co/)
+   I use Happy Hues color palettes for my light(11)/dark(4) theme -> [Happy Hues Color Palettes](https://www.happyhues.co/)
 
 #### Scrollreveal solution is not perfect (note -> I am working on a next-scroll project to make animation easy for everyone using Next.js)
 
