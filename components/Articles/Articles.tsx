@@ -7,7 +7,7 @@ import Article from './Article'
 
 const Articles: React.FC = () => {
 
-  const { data, error } = useSWR('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@zoltanfodor', fetcher)
+  const { data, error } = useSWR('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@zoltan_fodor_', fetcher)
   const refToComponent = useRef<HTMLHeadingElement>(null)
 
   useEffect(() => {
