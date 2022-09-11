@@ -75,7 +75,7 @@ const Home: NextPage = () => {
           <Navbar />
         </nav>
         <Intro />
-        <main>
+        <main className='main'>
           <About />
           <Projects />
           <Articles />
