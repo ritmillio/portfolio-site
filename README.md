@@ -1,4 +1,6 @@
-## :penguin: zoltanfodor.dev :penguin:
+<h1  align="center">🐧 zoltanfodor.dev 🐧</h1>
+
+---
 
 My portfolio website built with Next.js, Tailwindcss, Framer Motion, GSAP, Scrollreveal.js, next-seo, next-themes, Animated Cursor, SWR, Typewriter Effect.
 - [Nextjs](https://nextjs.org/)
