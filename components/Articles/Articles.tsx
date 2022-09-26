@@ -29,8 +29,6 @@ const Articles: React.FC = () => {
   if (error) return <div>Failed to load</div>
   if (!data) return <div>Loading...</div>
 
-  console.log(data)
-
   return (
         <div className="min-h-screen flex flex-col items-center bg-[url('https://zoltanfodor.b-cdn.net/zoltan_fodor_portfolio_website/bg-noise-portfolio-website.png')] bg-center bg-repeat bg-[length:300px_300px] dark:bg-happyhues_4-background-secondary  bg-happyhues_11-background-primary">
         <div className='container mx-auto py-20 px-4'>
