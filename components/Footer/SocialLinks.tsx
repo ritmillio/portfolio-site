@@ -104,7 +104,7 @@ const SocialLinks: React.FC = () => {
                         alt="Follow me on Medium"
                 />
               </a>
-              <a ref={logoRefSpotify} className="mx-2 sm:mx-4  lg:mx-6" href="https://open.spotify.com/playlist/1DgMS1ijBNF6DXwFYEkqYf?si=3b0c4efa9524498f&pt=5438e1fb9ecb79520abae9fc20085d26" target="_blank" rel="noreferrer">
+              <a ref={logoRefSpotify} className="mx-2 sm:mx-4  lg:mx-6" href="https://open.spotify.com/playlist/1DgMS1ijBNF6DXwFYEkqYf?si=f566169303a84109" target="_blank" rel="noreferrer">
                 <Image
                         loading="lazy"
                         src="https://zoltanfodor.b-cdn.net/spotify-3771073-3147690.png"
