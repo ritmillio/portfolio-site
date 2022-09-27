@@ -201,24 +201,6 @@ const AboutLogos: React.FC = () => {
                     loading='lazy'
                 />
             </div>
-            <div className='m-2' ref={logoRefTRPC}>
-                <Image
-                    src="https://zoltanfodor.b-cdn.net/new-dev-logos/trpc.png"
-                    alt="trpc"
-                    width={40}
-                    height={40}
-                    loading='lazy'
-                />
-            </div>
-            <div className='m-2 dark:bg-white bg-transparent dark:px-2 dark:pt-2 pt-0 px-0' ref={logoRefPrisma}>
-                <Image
-                    src="https://zoltanfodor.b-cdn.net/new-dev-logos/prisma.png"
-                    alt="Prisma"
-                    width={40}
-                    height={40}
-                    loading='lazy'
-                />
-            </div>
             <div className='m-2' ref={logoRefPlanetscale}>
                 <Image
                     src="https://zoltanfodor.b-cdn.net/new-dev-logos/planetscale.jpeg"
