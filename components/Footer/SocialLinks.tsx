@@ -113,7 +113,7 @@ const SocialLinks: React.FC = () => {
                         alt="Listen my dev music chanel on spotify"
                 />
               </a>
-              {/* <a ref={logoRefBuyMeACoffee} className="mx-2 sm:mx-4 lg:mx-6" href="https://www.buymeacoffee.com/zoltanfodor" target="_blank" rel="noreferrer">
+              <a ref={logoRefBuyMeACoffee} className="mx-2 sm:mx-4 lg:mx-6" href="https://www.buymeacoffee.com/zoltanfodor" target="_blank" rel="noreferrer">
                 <div className="hidden lg:block">
                     <Image
                             loading="lazy"
@@ -132,7 +132,7 @@ const SocialLinks: React.FC = () => {
                             alt="Support me via Buymeacoffee.com but just if you like my content"
                     />
                 </div>
-              </a> */}
+              </a>
             </div>
           </div>
         </>
