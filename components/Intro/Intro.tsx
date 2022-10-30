@@ -109,7 +109,7 @@ const Intro: React.FC = () => {
                   }}
                 />
               </div> 
-              <a ref={ refScrollDown } href='#about' className='scroll-link mt-8 flex items-center justify-center text-base sm:text-lg md:text-xl dark:text-happyhues_11-background-button text-happyhues_11-text-headline'>
+              <a ref={ refScrollDown } href='#about' className='load-hidden scroll-link mt-8 flex items-center justify-center text-base sm:text-lg md:text-xl dark:text-happyhues_11-background-button text-happyhues_11-text-headline'>
                 <span className='font-semibold'>Scroll down</span>
                 <svg className='-ml-[1px]' xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 64 64'><path d='M31.936 46.585L15.643 30.292l-1.414 1.562 17 17.146h1.414l17-17.146-1.414-1.488z'/><path d='M31.936 31.585L15.643 15.292l-1.414 1.562 17 17.146h1.414l17-17.146-1.414-1.488z'/></svg>
               </a>
