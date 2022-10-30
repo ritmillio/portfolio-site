@@ -25,6 +25,11 @@ html {
   overscroll-behavior-x: none;
 }
 
+/*prevent scrollreveal flickering*/
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
 body {
   font-family: 'Alumni Sans Pinstripe', sans-serif;
 }
