@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Script from 'next/script'
 import { NextSeo } from 'next-seo';
 // Components ->
 import Navbar from '../components/Header/Navbar'
