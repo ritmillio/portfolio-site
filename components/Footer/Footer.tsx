@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <>
       <div className='relative'>
-        <div className="absolute top-0 -mt-8 h-10 w-full mx-auto dark:bg-[url('https://zoltanfodor.b-cdn.net/footer-transition-noise.png')] bg-[url('https://zoltanfodor.b-cdn.net/background-noise-footer.png')] bg-center bg-cover"></div>
+        <div className="absolute top-0 -mt-8 h-10 w-full mx-auto"></div>
         <div className='pt-12 dark:bg-[#101218] bg-happyhues_11-background-secondary'>
           <ContactMe />
           <SocialLinks />

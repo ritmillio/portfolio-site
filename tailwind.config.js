@@ -12,42 +12,34 @@ module.exports = {
     typography: (theme) => ({}),
     extend: {
       colors: {
-        // dark theme
-        // https://www.happyhues.co/palettes/4
         happyhues_4: {
           background : {
-            primary : '#16161a',
-            secondary: '#242629',
-            button: '#7f5af0'
-          },
-          text : {
-            headline: '#fffffe',
-            paragraph: '#94a1b2',
-            sub_paragraph: '#72757e',
-            button: '#fffffe'
-          },
-          stroke: '#010101'
-
+            primary : '#1a1a1d',
+            secondary: '#292929',
+            button: '#f0a57f'
+            },
+            text : {
+            headline: '#e6e6e6',
+            paragraph: '#b2a494',
+            sub_paragraph: '#7e7572',
+            button: '#e6e6e6'
+            },
+            stroke: '#121212'
         },
-
-        // light theme
-        // https://www.happyhues.co/palettes/11
         happyhues_11: {
           background : {
-            primary : '#f9f4ef',
-            secondary: '#8c7851',
-            button: '#db2414'
-          },
-          text : {
-            headline: '#020826',
-            paragraph: '#716040',
-            sub_paragraph: '#f9f4ef',
-            button: '#fffffe'
-          },
-          stroke: '#020826'
-
+            primary : '#E8F5E9',
+            secondary: '#A5D6A7',
+            button: '#4CAF50'
+            },
+            text : {
+            headline: '#262626',
+            paragraph: '#689F38',
+            sub_paragraph: '#efefef',
+            button: '#262626'
+            },
+            stroke: '#689F38'
         },
-
       }
     },
   },

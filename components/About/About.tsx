@@ -26,7 +26,7 @@ const About: React.FC = () => {
     }, [])
 
     return (
-          <div className="min-h-screen flex flex-col items-center bg-[url('https://zoltanfodor.b-cdn.net/zoltan_fodor_portfolio_website/bg-noise-portfolio-website.png')] bg-center bg-repeat bg-[length:300px_300px] dark:bg-happyhues_4-background-secondary bg-happyhues_11-background-primary">
+          <div className="min-h-screen flex flex-col items-center dark:bg-happyhues_4-background-secondary bg-happyhues_11-background-primary">
             <div id="about"></div>
             <div className='py-20 px-2 sm:px-4'>
               <h2 className='w-fit uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl dark:text-happyhues_4-text-headline text-happyhues_11-text-headline' ref= {headingRef}>About

@@ -36,7 +36,7 @@ const Projects: React.FC = () => {
     }, [])
 
     return (
-        <div className="min-h-screen flex flex-col items-center bg-[url('https://zoltanfodor.b-cdn.net/zoltan_fodor_portfolio_website/bg-noise-portfolio-website.png')] bg-center bg-repeat bg-[length:300px_300px] dark:bg-happyhues_4-background-primary  bg-happyhues_11-background-secondary">
+        <div className="min-h-screen flex flex-col items-center dark:bg-happyhues_4-background-primary  bg-happyhues_11-background-secondary">
         <div className='container mx-auto py-20 px-4'>
           <h2 className='uppercase text-left sm:text-right text-5xl sm:text-6xl md:text-7xl lg:text-8xl dark:text-happyhues_4-text-headline text-happyhues_11-text-headline' ref= {headerRefComponent}>
             Projects
