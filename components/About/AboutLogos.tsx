@@ -110,7 +110,7 @@ const AboutLogos: React.FC = () => {
     }, [])
 
     return (
-        <div className='max-w-lg mt-2 flex flex-wrap items-center justify-center'>
+        <div className='max-w-2xl mx-auto mt-2 flex flex-wrap items-center justify-center'>
             <div className='m-2' ref={logoRefHTML}>
                 <Image 
                     src="https://zoltanfodor.b-cdn.net/new-dev-logos/html5-128.png"
