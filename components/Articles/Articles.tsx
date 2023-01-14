@@ -45,8 +45,8 @@ const Articles: React.FC = () => {
           <div className='flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-10 xl:gap-12 pt-6 lg:pt-12'>
           {data.items.map(( article: any ) => {
               return (
-                <div ref={articleRefComponent}>
-                  <Article key={article.link} link={article.link} title={article.title} description={article.description.split('<p>')[1].split('</p>')[0]} imageURL={article.thumbnail}/>
+                <div key={article.link} ref={articleRefComponent}>
+                  <Article link={article.link} title={article.title} description={article.description.split('<p>')[1].split('</p>')[0]} imageURL={article.thumbnail}/>
                 </div>
               );
             })}
