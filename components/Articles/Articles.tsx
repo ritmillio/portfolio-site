@@ -9,6 +9,7 @@ const Articles: React.FC = () => {
 
   const { data, error } = useSWR('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@zoltan_fodor_', fetcher)
   const refToComponent = useRef<HTMLHeadingElement>(null)
+  const articleRefComponent = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     async function animate() {
@@ -20,7 +21,10 @@ const Articles: React.FC = () => {
           reset: true,
       })
       if (refToComponent.current) {
-        sr.reveal(refToComponent.current, {})
+        sr.reveal(refToComponent.current)
+      }
+      if (articleRefComponent.current) {
+        sr.reveal(refToComponent.current)
       }
     }
     animate()
@@ -41,7 +45,9 @@ const Articles: React.FC = () => {
           <div className='flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-10 xl:gap-12 pt-6 lg:pt-12'>
           {data.items.map(( article: any ) => {
               return (
-                <Article key={article.link} link={article.link} title={article.title} description={article.description.split('<p>')[1].split('</p>')[0]} imageURL={article.thumbnail}/>
+                <div ref={articleRefComponent}>
+                  <Article key={article.link} link={article.link} title={article.title} description={article.description.split('<p>')[1].split('</p>')[0]} imageURL={article.thumbnail}/>
+                </div>
               );
             })}
           </div>
