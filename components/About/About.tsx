@@ -35,14 +35,17 @@ const About: React.FC = () => {
                 Who am I ?
               </h6>
               <div className='flex flex-row-reverse items-center justify-center'>
-                <div className='flex flex-col lg:ml-12 pt-4 lg:pt-0'>
-                  <p className='dark:text-happyhues_4-text-headline text-happyhues_11-text-headline text-lg md:text-xl max-w-xl text-left lg:text-justify tracking-wider lg:mr-20 md:leading-relaxed lg:leading-relaxed'>
-                  I was introduced to Computer Science during a high school competition when I had the opportunity to build a successful company from scratch. My team and I created a business plan based on the idea of a mobile application. The main difficulty that we faced as a team was the lack of knowledge about coding, which motivated me to learn how to code so I started to master it by myself to overcome that obstacle. During my studies at the university, I decided that I am going to pursue a career in the Frontend Development field since I always loved using the browser as a canvas. <span className='italic'>Currently, I am focusing on helping companies, from small companies such as local pizza shops to big E-commerce giants like Nespresso, to build a better UI experience.</span> I am also interested in animating the web, and I am constantly developing myself and learning new things such as Locomotive Scroll, GSAP, and Three.js.
+                <div className='flex flex-col lg:ml-12 pt-4'>
+                  <p className='dark:text-happyhues_4-text-headline text-happyhues_11-text-headline text-lg md:text-xl max-w-2xl text-left lg:text-justify tracking-wider lg:mr-20 md:leading-relaxed lg:leading-relaxed'>
+                  I was first introduced to computer science when I had the opportunity to build a business from scratch, a mobile application. However, my team and I faced a major obstacle: our lack of knowledge about coding. This motivated me to learn how to code, and I started to master it on my own.
+                  </p>
+                  <p className='dark:text-happyhues_4-text-headline text-happyhues_11-text-headline text-lg md:text-xl max-w-2xl text-left lg:text-justify tracking-wider lg:mr-20 md:leading-relaxed lg:leading-relaxed'>
+                  I decided to pursue a career in Frontend Development, specifically in building custom Shopify and Medusa js webshops, as I have always loved using the browser as a canvas. My focus is on helping companies, from small local businesses to large e-commerce giants, to build a better UI experience and enhance their online presence. Additionally, I am also interested in animating the web and am constantly developing myself and learning new things such as Locomotive Scroll, GSAP, and Three.js.
                   </p>
                   <p className='pt-4 text-lg md:text-xl lg:text-2xl italic'>Some tools/libraries/frameworks/technologies I like to use</p>
                   <AboutLogos />
                 </div>
-                <div ref={imageRef} className='relative h-[400px] w-[250px] mr-auto hidden lg:block ml-20'>
+                {/* <div ref={imageRef} className='relative h-[400px] w-[250px] mr-auto hidden lg:block ml-20'>
                   <Image 
                       className='absolute rounded-md'
                       src='https://zoltanfodor.b-cdn.net/zoltan-fodor-resi-prof.jpeg'
@@ -50,7 +53,7 @@ const About: React.FC = () => {
                       loading='lazy'
                       alt='Zoltan Fodor - Creative Developer'
                   />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
