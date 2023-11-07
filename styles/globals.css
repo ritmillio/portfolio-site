@@ -31,13 +31,12 @@ html.sr .load-hidden {
 }
 
 body {
-  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
 }
 
 body :is(h1, h2, h3, h4, h5, h6) {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
-
 
 /* PROGRESS BAR */
 progress {
@@ -57,12 +56,12 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background: linear-gradient(to left, #7f5af0, #f25042);
+  background: linear-gradient(to left, #f2f2f2, #fffffe);
   background-attachment: fixed;
 }
 
 progress::-moz-progress-bar {
-  background: linear-gradient(to left, #7f5af0, #f25042);
+  background: linear-gradient(to left, #f2f2f2, #fffffe);
   background-attachment: fixed;
 }
 
@@ -70,7 +69,7 @@ progress::-moz-progress-bar {
   width: 310px;
 }
 
-@media screen and (min-width:412px) and (max-width:639px) {
+@media screen and (min-width: 412px) and (max-width: 639px) {
   .intro-svg {
     width: 400px;
   }
@@ -87,7 +86,7 @@ progress::-moz-progress-bar {
 @keyframes fadeInUp {
   to {
     opacity: 1;
-    transform: translateY(0)
+    transform: translateY(0);
   }
 }
 
@@ -98,6 +97,6 @@ progress::-moz-progress-bar {
 
   to {
     opacity: 0;
-    transform: translateY(0)
+    transform: translateY(0);
   }
 }
