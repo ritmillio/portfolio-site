@@ -2,8 +2,7 @@
 
 import React from "react";
 import { useTheme } from "next-themes";
-import { Moon, Sun } from "lucide-react";
-import LucideIcon from "@/components/LucidIcon/Icon";
+import LucideIcon from "@/components/LucideIcon/Icon";
 
 const ProgressBar: React.FC = () => {
   const { theme, setTheme } = useTheme();
