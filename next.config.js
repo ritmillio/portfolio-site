@@ -9,6 +9,7 @@ const nextConfig = {
     domains: ['cdn-images-1.medium.com', 'zoltanfodor.b-cdn.net',],
     formats: ['image/webp'],
   },
+  transpilePackages: ['lucide-react']
 }
 
 module.exports = nextConfig
